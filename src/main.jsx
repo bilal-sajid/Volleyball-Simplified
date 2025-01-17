@@ -15,6 +15,7 @@ import HomePage from './pages/HomePage.jsx';
 import FormationsPage from './pages/FormationsPage.jsx';
 import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
+import TermsPage from './pages/TermsPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path : '/terms',
-    element : <div>Terms</div>,
+    element : <TermsPage />,
     errorElement : <div>404 Not Found</div>
   },
   {

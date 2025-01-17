@@ -7,6 +7,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-center items-center h-16">
           {/* NavLink components for navigation */}
+
           <NavLink 
             to="/" 
             className={({ isActive }) => 
@@ -17,6 +18,17 @@ const Navbar = () => {
           >
             Home
           </NavLink>
+
+          <NavLink 
+            to="/terms" 
+            className={({ isActive }) => 
+              "text-white px-3 py-2 rounded-md text-sm font-medium ml-4" + 
+              (isActive ? " bg-gray-900" : "")
+            }
+          >
+            Terms
+          </NavLink>
+
           <NavLink 
             to="/positions" 
             className={({ isActive }) => 
@@ -26,6 +38,7 @@ const Navbar = () => {
           >
             Positions
           </NavLink>
+
           <NavLink 
             to="/rotations" 
             className={({ isActive }) => 
@@ -35,6 +48,7 @@ const Navbar = () => {
           >
             Rotations
           </NavLink>
+
           <NavLink 
             to="/formations" 
             className={({ isActive }) => 
