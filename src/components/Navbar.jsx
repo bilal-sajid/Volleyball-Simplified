@@ -20,13 +20,13 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink 
-            to="/terms" 
+            to="/Volleyball101" 
             className={({ isActive }) => 
               "text-white px-3 py-2 rounded-md text-sm font-medium ml-4" + 
               (isActive ? " bg-gray-900" : "")
             }
           >
-            Terms
+            Volleyball 101
           </NavLink>
 
           <NavLink 

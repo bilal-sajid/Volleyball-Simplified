@@ -15,7 +15,7 @@ import HomePage from './pages/HomePage.jsx';
 import FormationsPage from './pages/FormationsPage.jsx';
 import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
-import TermsPage from './pages/TermsPage.jsx';
+import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
     errorElement : <div>404 Not Found</div>
   },
   {
-    path : '/terms',
-    element : <TermsPage />,
+    path : '/volleyball101',
+    element : <VolleyballBasicsPage />,
     errorElement : <div>404 Not Found</div>
   },
   {
