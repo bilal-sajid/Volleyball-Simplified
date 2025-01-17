@@ -14,12 +14,18 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import FormationsPage from './pages/FormationsPage.jsx';
 import RotationsPage from './pages/RotationsPage.jsx';
+import PositionsPage from './pages/PositionsPage.jsx';
 
 const router = createBrowserRouter([
   {
   path : '/',
   element : <HomePage />,
   errorElement : <div>404 Not Found</div>
+  },
+  {
+    path : '/positions',
+    element : <PositionsPage />,
+    errorElement : <div>404 Not Found</div>
   },
   {
     path : '/terms',
