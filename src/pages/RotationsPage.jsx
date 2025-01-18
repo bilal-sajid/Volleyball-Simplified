@@ -21,12 +21,12 @@ export default function RotationsPage() {
 
   // Positions for players on the court
   const teamAPositions = [
-    { x: '20%', y: '15%' },
-    { x: '50%', y: '15%' },
-    { x: '80%', y: '15%' },
-    { x: '80%', y: '42%' },
-    { x: '50%', y: '42%' },
-    { x: '20%', y: '42%' },
+    { x: '20%', y: '18%' },
+    { x: '50%', y: '18%' },
+    { x: '80%', y: '18%' },
+    { x: '80%', y: '41.5%' },
+    { x: '50%', y: '41.5%' },
+    { x: '20%', y: '41.5%' },
   ];
 
   const teamBPositions = [

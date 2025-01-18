@@ -12,9 +12,9 @@ const HomePage = () => {
           Welcome to Volleyball Simplified
         </h1>
         <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-          Discover the excitement and fundamentals of volleyball with our beginner-friendly guide.
-          Inspired by the energy and passion of Haikyuu!, we're here to make volleyball approachable for everyone.
-        </p>
+        Explore the basics of volleyball with our beginner-friendly guide. Whether you're new to the sport or looking to brush up on the fundamentals, our easy-to-follow resources will help you get started with confidence.
+      </p>
+
       </section>
 
       {/* Features Section */}

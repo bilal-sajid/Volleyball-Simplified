@@ -17,6 +17,8 @@ import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
 import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
 
+import ScrollToTop from './components/ScrollToTop';
+
 const router = createBrowserRouter([
   {
   path : '/',
@@ -50,6 +52,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ScrollToTop />
     {/* <App /> */}
   </StrictMode>,
 )
