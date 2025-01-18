@@ -23,9 +23,18 @@ export default function CourtWithPlayers({
       }))
     : teamBPositions;
 
+  // Get the serving player's position
+  const servingPlayerPosition =
+    teamAServing === 1
+      ? updatedTeamAPositions[0] // First player in Team A
+      : updatedTeamBPositions[0]; // First player in Team B
+
   return (
     <div className="relative w-full aspect-[18/9] py-10">
-      <VolleyballCourt teamAServing={teamAServing} />
+      <VolleyballCourt
+        teamAServing={teamAServing}
+        servingPlayerPosition={servingPlayerPosition} // Pass serving player's position
+      />
 
       {/* Team A Players - Blue */}
       {teamAPlayers.map((playerNumber, i) => (

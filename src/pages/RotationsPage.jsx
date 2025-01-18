@@ -40,77 +40,108 @@ export default function RotationsPage() {
 
   return (
     <div>
-        <Navbar />
-        <section className="flex flex-col">
-        <h1 className="text-2xl font-bold p-4 self-center">
-            Rally Scoring + Scoreboard + Rotation Count + Up to 25
+      <Navbar />
+      <section className="flex flex-col bg-gray-900 text-white p-6">
+        <h1 className="text-3xl font-extrabold text-center mb-6 text-teal-400">
+          Understanding Volleyball Rotations
         </h1>
 
         <div className="flex flex-1">
-            {/* The Court */}
-            <div className="flex-1 flex items-start justify-start bg-gray-800 p-2 py-4">
+          {/* The Court */}
+          <div className="flex-1 flex items-start justify-center bg-gray-800 p-4 rounded-lg shadow-md">
             <CourtWithPlayers
-                teamAServing={teamAServing}
-                teamAPositions={teamAPositions}
-                teamAPlayers={teamAPlayers}
-                teamBPositions={teamBPositions}
-                teamBPlayers={teamBPlayers}
+              teamAServing={teamAServing}
+              teamAPositions={teamAPositions}
+              teamAPlayers={teamAPlayers}
+              teamBPositions={teamBPositions}
+              teamBPlayers={teamBPlayers}
             />
-            </div>
+          </div>
 
-            {/* Right side: Scoreboard & Controls */}
-            <div className="w-[250px] flex flex-col items-start bg-gray-200 p-4 space-y-4">
+          {/* Right Side: Info and Controls */}
+          <div className="w-[320px] flex flex-col items-center bg-gray-900 text-white p-6 rounded-lg shadow-lg space-y-6">
             {/* Scoreboard */}
-            <div className="w-full flex justify-between items-center font-bold">
-                <div>Team A: {teamAScore}</div>
-                <div>Team B: {teamBScore}</div>
+            <div className="w-full">
+              <h2 className="text-lg font-bold mb-2 text-center border-b border-gray-700 pb-2">
+                Scoreboard
+              </h2>
+              <div className="flex justify-between items-center">
+                <div className="text-xl font-semibold text-blue-400">
+                  Team A: <span>{teamAScore}</span>
+                </div>
+                <div className="text-xl font-semibold text-red-400">
+                  Team B: <span>{teamBScore}</span>
+                </div>
+              </div>
             </div>
 
             {/* Rally Buttons */}
-            <button
+            <div className="w-full">
+              <h2 className="text-lg font-bold mb-2 text-center border-b border-gray-700 pb-2">
+                Actions
+              </h2>
+              <button
                 onClick={handleTeamAScores}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
-                disabled={matchOver} // disable if match is over
-            >
-                Team A wins the rally
-            </button>
-            <button
+                className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded w-full mb-2"
+                disabled={matchOver}
+              >
+                Team A Wins the Rally
+              </button>
+              <button
                 onClick={handleTeamBScores}
-                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 w-full"
-                disabled={matchOver} // disable if match is over
-            >
-                Team B wins the rally
-            </button>
+                className="bg-red-600 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded w-full"
+                disabled={matchOver}
+              >
+                Team B Wins the Rally
+              </button>
+            </div>
 
             {/* Serving Info */}
-            <h2 className="text-lg font-semibold">
-                Serving: Team {teamAServing === 1 ? 'A' : 'B'}
-            </h2>
+            <div className="w-full">
+              <h2 className="text-lg font-bold mb-2 text-center border-b border-gray-700 pb-2">
+                Serving Team
+              </h2>
+              <p
+                className={`text-center text-xl font-semibold ${
+                  teamAServing === 1 ? 'text-blue-400' : 'text-red-400'
+                }`}
+              >
+                Team {teamAServing === 1 ? 'A' : 'B'}
+              </p>
+            </div>
 
             {/* Rotation Counts */}
-            <div>
-                <p>Team A Rotations: {teamARotations}</p>
-                <p>Team B Rotations: {teamBRotations}</p>
+            <div className="w-full">
+              <h2 className="text-lg font-bold mb-2 text-center border-b border-gray-700 pb-2">
+                Rotations
+              </h2>
+              <div className="flex justify-between">
+                <p>Team A Rotations:</p>
+                <p className="text-blue-400 font-semibold">{teamARotations}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Team B Rotations:</p>
+                <p className="text-red-400 font-semibold">{teamBRotations}</p>
+              </div>
             </div>
 
-            {/* Winner & Reset */}
+            {/* Winner Announcement */}
             {matchOver && winner && (
-                <div className="bg-green-100 p-2 rounded font-bold w-full text-center">
+              <div className="bg-teal-600 text-white text-center font-bold py-2 px-4 rounded">
                 Team {winner} Won!
-                </div>
+              </div>
             )}
 
+            {/* Reset Button */}
             <button
-                onClick={resetMatch}
-                className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 w-full"
+              onClick={resetMatch}
+              className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded w-full"
             >
-                Reset Match
+              Reset Match
             </button>
-            </div>
+          </div>
         </div>
-        </section>
-
-
+      </section>
     </div>
   );
 }

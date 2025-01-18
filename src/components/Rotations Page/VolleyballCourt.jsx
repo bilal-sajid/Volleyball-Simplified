@@ -1,33 +1,44 @@
 import React from 'react';
 
-const VolleyballCourt = ({ teamAServing }) => {
+const VolleyballCourt = ({ teamAServing, servingPlayerPosition }) => {
   return (
-    <div className="relative w-full aspect-[18/9] bg-gray-800"> {/* Darker background for contrast */}
-      <div className="absolute inset-6 bg-orange-300 border-4 border-white">
-        {/* Conditionally Rendered "Server" Box */}
-        {teamAServing === 1 && (
+    <div className="relative w-full aspect-[18/9] bg-gray-800 rounded-lg shadow-lg overflow-visible">
+      {/* Expanded Court Background */}
+      <div
+        className="absolute inset-4 bg-orange-300 border-4 border-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.6),0_-10px_20px_rgba(0,0,0,0.6)]"
+      >
+        {/* Conditionally Rendered "Server" Highlight Box */}
+        {servingPlayerPosition && (
           <div
-            className="absolute border-4 border-teal-500 bg-teal-500 bg-opacity-20 w-[20%] h-[25%] top-[-15%] left-[9%] pointer-events-none flex items-end justify-end p-1"
+            className={`absolute border-4 ${
+              teamAServing === 1 ? 'border-blue-500 bg-blue-500' : 'border-red-500 bg-red-500'
+            } bg-opacity-30 w-[20%] h-[25%] pointer-events-none flex items-center rounded-md`}
+            style={{
+              top: teamAServing === 1
+                ? `calc(${Math.max(parseFloat(servingPlayerPosition.y), 8)}% - 15%)`
+                : undefined,
+              bottom: teamAServing === 0
+                ? `calc(${Math.max(100 - parseFloat(servingPlayerPosition.y), 8)}% - 40%)`
+                : undefined,
+              left: servingPlayerPosition.x,
+              transform: 'translate(-50%, -50%)',
+            }}
           >
-            <span className="text-teal-900 font-semibold text-xs">
-              Server (A)
-            </span>
-          </div>
-        )}
-
-        {teamAServing === 0 && (
-          <div
-            className="absolute border-4 border-teal-500 bg-teal-500 bg-opacity-20 w-[20%] h-[25%] bottom-[-15%] right-[9%] pointer-events-none flex items-start justify-start p-1"
-          >
-            <span className="text-teal-900 font-semibold text-xs">
-              Server (B)
+            <span
+              className={`text-xs font-semibold ${
+                teamAServing === 1
+                  ? 'text-blue-300 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]'
+                  : 'text-red-300 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]'
+              }`}
+            >
+              Server ({teamAServing === 1 ? 'A' : 'B'})
             </span>
           </div>
         )}
 
         {/* Net */}
         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-black">
-          <span className="absolute top-1/2 left-1/2 transform-translate-x-1/2 -translate-y-1/2 bg-black text-white px-2 text-sm font-bold">
+          <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-2 text-sm font-bold">
             NET
           </span>
         </div>
@@ -43,18 +54,18 @@ const VolleyballCourt = ({ teamAServing }) => {
             Attack Line
           </span>
         </div>
+      </div>
 
-        {/* Team labels */}
-        <div
-          className="absolute top-[22%] left-1/2 transform -translate-x-[40%] text-xl font-bold text-white bg-teal-600 bg-opacity-80 px-6 py-3 rounded shadow-lg uppercase"
-        >
-          Team A Side
-        </div>
-        <div
-          className="absolute bottom-[22%] left-1/2 transform -translate-x-[40%] text-xl font-bold text-white bg-teal-600 bg-opacity-80 px-6 py-3 rounded shadow-lg uppercase"
-        >
-          Team B Side
-        </div>
+      {/* Team Labels */}
+      <div
+        className="absolute top-[-3%] left-1/2 transform -translate-x-1/2 text-sm font-semibold text-blue-500 bg-gray-700 bg-opacity-80 px-3 py-1 rounded shadow"
+      >
+        Team A
+      </div>
+      <div
+        className="absolute bottom-[-3%] left-1/2 transform -translate-x-1/2 text-sm font-semibold text-red-500 bg-gray-700 bg-opacity-80 px-3 py-1 rounded shadow"
+      >
+        Team B
       </div>
     </div>
   );

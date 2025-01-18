@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function PlayerMarker({ number, x, y, teamColor }) {
   return (
     <motion.div
-      layout  // This helps animate layout changes
+      layout
       className={`absolute flex items-center justify-center 
                  w-10 h-10 rounded-full text-white font-bold ${teamColor}`}
       style={{
