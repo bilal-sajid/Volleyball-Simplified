@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import VolleyballCourt from '../components/Positions Page/PositionsCourt';
 
 const PositionsPage = () => {
-  // State to keep track of selected position
   const [selectedPosition, setSelectedPosition] = useState(null);
 
-  // Position descriptions
   const positions = [
     {
       name: 'Outside Hitter (OH)',
@@ -44,7 +43,6 @@ const PositionsPage = () => {
     },
   ];
 
-  // Function to handle position selection
   const handlePositionSelect = (position) => {
     setSelectedPosition(position);
   };
@@ -52,28 +50,53 @@ const PositionsPage = () => {
   return (
     <div className="bg-gray-900 min-h-screen text-white">
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center text-teal-400 mb-8">
-          Volleyball Positions
-        </h1>
+      <div className="container mx-auto px-6 py-8">
+        {/* Page Header */}
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-extrabold text-orange-400">
+            Volleyball Positions
+          </h1>
+          <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+            Discover the key roles and responsibilities of each player on the court. Learn what it takes to play each position effectively.
+          </p>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Position descriptions */}
-          {positions.map((position) => (
-            <div
-              key={position.name}
-              className={`p-6 border-2 rounded-md transition-all duration-200 ${
-                selectedPosition === position.name
-                  ? 'bg-teal-600 border-teal-400 shadow-lg transform scale-105'
-                  : 'bg-gray-800 border-gray-700 hover:bg-gray-700 hover:border-teal-400'
-              } cursor-pointer`}
-              onClick={() => handlePositionSelect(position.name)}
-            >
-              <h2 className="text-xl font-bold text-teal-300">{position.name}</h2>
-              <p className="text-sm mt-2 text-gray-300">{position.description}</p>
-            </div>
-          ))}
-        </div>
+        {/* Positions Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-6">
+            Player Positions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {positions.map((position) => (
+              <div
+                key={position.name}
+                className={`p-6 border-2 rounded-lg shadow-md transition-all duration-200 ${
+                  selectedPosition === position.name
+                    ? 'bg-orange-500 border-orange-400 shadow-lg transform scale-105'
+                    : 'bg-gray-800 border-gray-700 hover:bg-gray-700 hover:border-orange-400'
+                } cursor-pointer`}
+                onClick={() => handlePositionSelect(position.name)}
+              >
+                <h3 className="text-xl font-bold text-white text-center mb-2">
+                  {position.name}
+                </h3>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  {position.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Volleyball Court Section */}
+        <section>
+          <h2 className="text-3xl font-bold text-center text-white mb-6">
+            Court Layout
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <VolleyballCourt />
+          </div>
+        </section>
       </div>
     </div>
   );

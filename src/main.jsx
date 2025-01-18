@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     errorElement : <div>404 Not Found</div>
   },
   {
-    path : '/volleyball101',
+    path : '/basics',
     element : <VolleyballBasicsPage />,
     errorElement : <div>404 Not Found</div>
   },
