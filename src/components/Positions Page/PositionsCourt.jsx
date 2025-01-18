@@ -2,9 +2,10 @@ import React from 'react';
 
 const PositionsCourt = () => {
   return (
-    <div className="relative w-full aspect-[18/9] bg-gray-800 rounded-lg shadow-lg overflow-visible">
+    <div className="relative w-[90%] mx-auto aspect-[18/9] bg-gray-800 rounded-lg shadow-lg overflow-visible">
       {/* Court Background */}
       <div className="absolute inset-4 bg-orange-300 border-4 border-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.6),0_-10px_20px_rgba(0,0,0,0.6)]">
+
         {/* Net */}
         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-black">
           <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-2 text-sm font-bold">
@@ -14,15 +15,42 @@ const PositionsCourt = () => {
 
         {/* Attack Lines */}
         <div className="absolute top-[33.333%] left-0 w-full h-[2px] bg-white">
+          <span className="absolute top-[-16px] left-4 text-xs font-semibold text-white bg-gray-700 px-2 py-1 rounded-md shadow-md">
+            Attack Line
+          </span>
         </div>
-        <div className="absolute top-[66.666%] left-0 w-full h-[2px] bg-white">
+        <div className="absolute top-[66.666%] left-0 w-full h-[2px] bg-white"></div>
+
+        {/* Zone Boxes */}
+        <div className="absolute bottom-[0%] left-[66.6%] w-[33%] h-[32%] bg-pink-600 bg-opacity-20 border border-pink-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-pink-700">Zone 1</span>
         </div>
 
-        {/* Front Row Label */}
-        <div className="absolute top-[36%] left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm font-bold px-3 py-1 rounded-md">
+        <div className="absolute top-[51%] left-[66.6%] w-[33%] h-[15%] bg-blue-600 bg-opacity-20 border border-blue-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-blue-700">Zone 2</span>
+        </div>
+
+        <div className="absolute top-[51%] left-[33.3%] w-[33%] h-[15%] bg-yellow-600 bg-opacity-20 border border-yellow-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-yellow-700">Zone 3</span>
+        </div>
+
+        <div className="absolute top-[51%] left-[0%] w-[33%] h-[15%] bg-red-600 bg-opacity-20 border border-red-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-red-700">Zone 4</span>
+        </div>
+
+        <div className="absolute bottom-[0%] left-[0%] w-[33%] h-[32%] bg-purple-600 bg-opacity-20 border border-purple-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-purple-700">Zone 5</span>
+        </div>
+
+        <div className="absolute bottom-[0%] left-[33.3%] w-[33%] h-[32%] bg-teal-600 bg-opacity-20 border border-teal-400 rounded-lg flex justify-center items-center">
+          <span className="text-sm font-semibold text-teal-700">Zone 6</span>
+        </div>
+
+        {/* Front Row and Back Row Labels */}
+        <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm font-bold px-3 py-1 rounded-md shadow-md">
           Front Row
         </div>
-        <div className="absolute top-[12%] left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm font-bold px-3 py-1 rounded-md">
+        <div className="absolute top-[8%] left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm font-bold px-3 py-1 rounded-md shadow-md">
           Back Row
         </div>
       </div>
