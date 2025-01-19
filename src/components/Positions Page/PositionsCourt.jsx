@@ -2,24 +2,23 @@ import React from 'react';
 
 const PositionsCourt = () => {
   return (
-    <div className="relative w-[90%] mx-auto aspect-[18/9] bg-gray-800 rounded-lg shadow-lg overflow-visible">
+    <div className="relative w-[90%] mx-auto aspect-[2/1.8] bg-gray-800 rounded-lg shadow-lg overflow-visible">
       {/* Court Background */}
       <div className="absolute inset-4 bg-orange-300 border-4 border-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.6),0_-10px_20px_rgba(0,0,0,0.6)]">
 
         {/* Net */}
         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-black">
-          <span className="absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 
-                          bg-black text-white px-2 
-                          text-xs sm:text-sm md:text-base lg:text-lg 
-                          font-bold">
+          <span className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                          bg-black text-white px-2 rounded-md shadow-md
+                          text-[3vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[1vw] font-bold">
             NET
           </span>
         </div>
 
         {/* Attack Lines */}
         <div className="absolute top-[33.333%] left-0 w-full h-[2px] bg-white">
-          <span className="absolute top-[-12px] left-4 
-                          text-[10px] sm:text-xs md:text-sm lg:text-base 
+          <span className="absolute top-[-0.5vh] left-2 
+                          text-[2vw] sm:text-[1.5vw] md:text-[1vw] lg:text-[0.8vw] 
                           font-semibold text-white bg-gray-700 px-2 py-1 rounded-md shadow-md">
             Attack Line
           </span>
@@ -52,14 +51,14 @@ const PositionsCourt = () => {
         </div>
 
         {/* Front Row and Back Row Labels */}
-        <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 
-                        bg-gray-900 text-white text-xs sm:text-sm md:text-base lg:text-lg 
-                        font-bold px-3 py-1 rounded-md shadow-md">
+        <div className="absolute top-[36%] left-1/2 transform -translate-x-1/2 
+                        bg-gray-900 text-white px-2 py-1 rounded-md shadow-md
+                        text-[2vw] sm:text-[1.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold">
           Front Row
         </div>
-        <div className="absolute top-[8%] left-1/2 transform -translate-x-1/2 
-                        bg-gray-900 text-white text-xs sm:text-sm md:text-base lg:text-lg 
-                        font-bold px-3 py-1 rounded-md shadow-md">
+        <div className="absolute top-[9%] left-1/2 transform -translate-x-1/2 
+                        bg-gray-900 text-white px-2 py-1 rounded-md shadow-md
+                        text-[2vw] sm:text-[1.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold">
           Back Row
         </div>
       </div>
