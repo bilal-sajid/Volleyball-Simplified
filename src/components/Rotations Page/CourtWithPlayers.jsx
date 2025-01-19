@@ -51,7 +51,7 @@ export default function CourtWithPlayers({
     if (teamAServing === 0 && index === 0) {
       switch (screenSize) {
         case 'small':
-          return '89%';
+          return '87%';
         case 'medium':
           return '92%';
         default:
