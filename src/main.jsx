@@ -12,7 +12,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
 import HomePage from './pages/HomePage.jsx';
-import FormationsPage from './pages/FormationsPage.jsx';
 import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
 import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
@@ -34,11 +33,6 @@ const router = createBrowserRouter([
   {
     path : '/basics',
     element : <VolleyballBasicsPage />,
-    errorElement : <div>404 Not Found</div>
-  },
-  {
-    path : '/formations',
-    element : <FormationsPage />,
     errorElement : <div>404 Not Found</div>
   },
   {
