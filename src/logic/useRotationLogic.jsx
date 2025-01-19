@@ -57,41 +57,62 @@ export default function useRotationLogic() {
     }
   }
 
-  // If Team A scores
   function handleTeamAScores() {
     if (matchOver) return; // No more scoring if match is over
-
+  
+    let newScore = teamAScore + 1;
+  
     if (teamAServing === 1) {
       // A was serving & won => no rotation, just increment A's score
-      setTeamAScore(prev => prev + 1);
+      setTeamAScore(newScore);
     } else {
       // B was serving & A won => A gains serve => A rotates
-      setTeamAScore(prev => prev + 1);
+      setTeamAScore(newScore);
       rotateTeamAClockwise();
       setTeamAServing(1);
     }
-
-    // After scoring, check if we reached 25
-    checkForWinner();
+  
+    // Check for winner or deuce
+    checkForWinnerOrDeuce(newScore, teamBScore, 'A');
   }
-
-  // If Team B scores
+  
   function handleTeamBScores() {
     if (matchOver) return; // No more scoring if match is over
-
+  
+    let newScore = teamBScore + 1;
+  
     if (teamAServing === 1) {
       // A was serving & B won => B gains serve => B rotates
-      setTeamBScore(prev => prev + 1);
+      setTeamBScore(newScore);
       rotateTeamBClockwise();
       setTeamAServing(0);
     } else {
       // B was serving & B won => no rotation, just increment B's score
-      setTeamBScore(prev => prev + 1);
+      setTeamBScore(newScore);
     }
-
-    // After scoring, check if we reached 25
-    checkForWinner();
+  
+    // Check for winner or deuce
+    checkForWinnerOrDeuce(newScore, teamAScore, 'B');
   }
+  
+  function checkForWinnerOrDeuce(currentScore, opponentScore, team) {
+    // Normal winning condition (before deuce)
+    if (currentScore >= 25 && currentScore >= opponentScore + 2) {
+      setMatchOver(true);
+      setWinner(team);
+      return;
+    }
+  
+    // Deuce condition: Both scores >= 24
+    if (currentScore >= 24 && opponentScore >= 24) {
+      if (currentScore >= opponentScore + 2) {
+        setMatchOver(true);
+        setWinner(team);
+      }
+    }
+  }
+  
+  
 
   // Reset the match entirely
   function resetMatch() {
