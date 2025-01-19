@@ -47,16 +47,44 @@ For example: If the score is tied at 24-24, play continues until one team achiev
   ];
 
   const terms = [
-    { term: 'Ace', description: 'A serve that lands in the opponent’s court without being touched or mishandled, resulting in a point.' },
-    { term: 'Block', description: 'A defensive play where players jump at the net to deflect an opponent’s attack.' },
-    { term: 'Dig', description: 'A defensive move to keep the ball in play after an opponent’s attack.' },
-    { term: 'Kill', description: 'An attack that directly results in a point.' },
-    { term: 'Rally', description: 'A continuous sequence of play from serve to point scored.' },
-    { term: 'Set', description: 'A pass used to position the ball for an attacker.' },
-    { term: 'Libero', description: 'A back-row defensive specialist who cannot attack the ball above the net height.' },
-    { term: 'Serve', description: 'The act of putting the ball into play from behind the baseline.' },
-    { term: 'Side-Out', description: 'When the receiving team wins a rally and gains the right to serve.' }
+    { 
+      term: 'Serve', 
+      description: 'The action of putting the ball into play by hitting it over the net from behind the baseline.' 
+    },
+    { 
+      term: 'Set', 
+      description: 'A pass used to position the ball for a teammate to attack.' 
+    },
+    { 
+      term: 'Spike', 
+      description: 'A forceful attack made by hitting the ball down into the opponent’s court.' 
+    },
+    { 
+      term: 'Block', 
+      description: 'A defensive play at the net aimed at stopping or deflecting an opponent’s attack.' 
+    },
+    { 
+      term: 'Dig', 
+      description: 'A defensive move to prevent the ball from touching the court after an attack.' 
+    },
+    { 
+      term: 'Rally', 
+      description: 'The sequence of play from the serve until a point is scored.' 
+    },
+    { 
+      term: 'Side-Out', 
+      description: 'When the receiving team wins the rally and gains the right to serve.' 
+    },
+    { 
+      term: 'Ace', 
+      description: 'A serve that lands untouched in the opponent’s court, scoring a point directly.' 
+    },
+    { 
+      term: 'Libero', 
+      description: 'A defensive specialist restricted to the back row, wearing a distinct jersey color.' 
+    },
   ];
+  
 
   return (
     <div className="bg-gray-900 min-h-screen text-white">
@@ -110,6 +138,9 @@ For example: If the score is tied at 24-24, play continues until one team achiev
               </div>
             ))}
           </div>
+          <p className="text-center text-orange-400 font-semibold mt-6">
+  Explore more volleyball terminology in our <a href="/glossary" className="underline hover:text-orange-300">Glossary of Terms</a>.
+</p>
         </section>
       </div>
     </div>

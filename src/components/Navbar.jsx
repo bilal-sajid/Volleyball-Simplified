@@ -27,6 +27,7 @@ const Navbar = () => {
           >
             Basics
           </NavLink>
+
           <NavLink
             to="/positions"
             className={({ isActive }) =>
@@ -39,6 +40,7 @@ const Navbar = () => {
           >
             Positions
           </NavLink>
+
           <NavLink
             to="/rotations"
             className={({ isActive }) =>
@@ -51,6 +53,20 @@ const Navbar = () => {
           >
             Rotations
           </NavLink>
+
+          <NavLink
+            to="/glossary"
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
+                isActive
+                  ? 'bg-orange-500 text-white'
+                  : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
+              }`
+            }
+          >
+            Glossary
+          </NavLink>
+
         </div>
       </div>
     </nav>

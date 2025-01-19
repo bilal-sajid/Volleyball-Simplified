@@ -16,6 +16,7 @@ import FormationsPage from './pages/FormationsPage.jsx';
 import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
 import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
+import GlossaryPage from './pages/GlossaryPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
   {
     path : '/rotations',
     element : <RotationsPage />,
+    errorElement : <div>404 Not Found</div>
+  },
+  {
+    path : '/glossary',
+    element : <GlossaryPage />,
     errorElement : <div>404 Not Found</div>
   }
 
