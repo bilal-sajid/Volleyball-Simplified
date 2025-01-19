@@ -61,7 +61,7 @@ const PositionsPage = () => {
           </p>
         </header>
 
-        {/* Positions Section */}
+        {/* Section 1: Player Positions */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-6">
             Player Positions
@@ -88,13 +88,34 @@ const PositionsPage = () => {
           </div>
         </section>
 
-        {/* Volleyball Court Section */}
-        <section>
+        {/* Section 2: Court Layout */}
+        <section className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-6">
             Court Layout
           </h2>
           <div className="mx-auto">
             <VolleyballCourt />
+          </div>
+        </section>
+
+        {/* Section 3: Zones Overview */}
+        <section>
+          <h2 className="text-3xl font-bold text-center text-white mb-6">
+            Why Zones Matter
+          </h2>
+          <p className="text-gray-300 text-center max-w-3xl mx-auto mb-8">
+            Volleyball courts are divided into six zones, each with its unique significance. These zones guide player rotations, serve as reference points for formations, and help maintain proper team organization during gameplay. Understanding these zones is essential for learning rotations, setting up plays, and maintaining strategic positions on the court.
+          </p>
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold text-orange-400 text-center mb-4">
+              Key Points to Remember
+            </h3>
+            <ul className="list-disc text-gray-300 text-sm space-y-2 pl-6">
+              <li>Each zone is assigned a number (1-6) for easy reference.</li>
+              <li>Players rotate through these zones in a clockwise direction after gaining the serve.</li>
+              <li>Zones help set up offensive and defensive strategies, ensuring balanced positioning.</li>
+              <li>Understanding zones is vital for team communication and executing planned plays effectively.</li>
+            </ul>
           </div>
         </section>
       </div>
