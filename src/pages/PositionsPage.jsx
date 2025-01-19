@@ -99,25 +99,85 @@ const PositionsPage = () => {
         </section>
 
         {/* Section 3: Zones Overview */}
-        <section>
-          <h2 className="text-3xl font-bold text-center text-white mb-6">
-            Why Zones Matter
-          </h2>
-          <p className="text-gray-300 text-center max-w-3xl mx-auto mb-8">
-            Volleyball courts are divided into six zones, each with its unique significance. These zones guide player rotations, serve as reference points for formations, and help maintain proper team organization during gameplay. Understanding these zones is essential for learning rotations, setting up plays, and maintaining strategic positions on the court.
-          </p>
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold text-orange-400 text-center mb-4">
-              Key Points to Remember
-            </h3>
-            <ul className="list-disc text-gray-300 text-sm space-y-2 pl-6">
-              <li>Each zone is assigned a number (1-6) for easy reference.</li>
-              <li>Players rotate through these zones in a clockwise direction after gaining the serve.</li>
-              <li>Zones help set up offensive and defensive strategies, ensuring balanced positioning.</li>
-              <li>Understanding zones is vital for team communication and executing planned plays effectively.</li>
-            </ul>
-          </div>
-        </section>
+        {/* Section 3: Zones Overview */}
+<section className="mb-16">
+  <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
+    <h2 className="text-3xl font-bold text-center text-white mb-6">
+      Understanding Zones and Their Role in Volleyball
+    </h2>
+    <p className="text-gray-300 text-center max-w-3xl mx-auto mb-8 leading-relaxed">
+      The volleyball court is divided into six numbered zones, essential for player rotations, formations, and strategy. These zones help players understand their positions, improve communication, and execute effective gameplay.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* What Are Zones */}
+      <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-orange-400 mb-4 text-center">
+          What Are Zones?
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Zones are six sections on the court, numbered 1 through 6. Each zone serves as a reference point for player positioning and helps maintain order during rotations. Understanding zones ensures players know where to move after a rally or serve.
+        </p>
+      </div>
+
+      {/* Importance of Zones */}
+      <div className="bg-gray-700 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold text-orange-400 mb-4 text-center">
+          Why Are Zones Important?
+        </h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          Zones guide player rotations, organize defensive and offensive setups, and provide a framework for team communication. They also act as target areas for strategic serving, enabling teams to disrupt their opponent’s plays.
+        </p>
+      </div>
+    </div>
+
+    {/* Rotations Through Zones */}
+    <div className="bg-gray-700 p-6 mt-8 rounded-lg shadow-md">
+      <h3 className="text-xl font-bold text-orange-400 mb-4 text-center">
+        Rotations Through Zones
+      </h3>
+      <p className="text-sm text-gray-300 leading-relaxed">
+        Players rotate in a clockwise manner through the six zones of the court whenever their team gains the serve. This rotation ensures that all players experience each position on the court. The six zones and rotation sequence are as follows:
+      </p>
+      <ul className="list-disc text-gray-300 text-sm space-y-2 pl-6 mt-4">
+        <li>Zone 1: Back-right (starting point for the server).</li>
+        <li>Zone 6: Back-center.</li>
+        <li>Zone 5: Back-left.</li>
+        <li>Zone 4: Front-left.</li>
+        <li>Zone 3: Front-center (middle blocker zone).</li>
+        <li>Zone 2: Front-right (right-side hitter zone).</li>
+      </ul>
+      <p className="text-sm text-gray-300 leading-relaxed mt-4">
+        For example, a player starts in Zone 1 (server position), rotates to Zone 6 (back-center), then Zone 5 (back-left), Zone 4 (front-left), Zone 3 (front-center), and finally Zone 2 (front-right) before returning to Zone 1.
+      </p>
+      <p className="text-sm text-gray-300 leading-relaxed mt-4">
+        This rotation system ensures that every player participates in both front-row (offense) and back-row (defense) roles, contributing to a balanced team dynamic.
+      </p>
+    </div>
+
+    {/* Serving Strategies and Zones */}
+    <div className="bg-gray-700 p-6 mt-8 rounded-lg shadow-md">
+      <h3 className="text-xl font-bold text-orange-400 mb-4 text-center">
+        Using Zones for Serving and Strategy
+      </h3>
+      <p className="text-sm text-gray-300 leading-relaxed">
+        Zones are key for targeted serves and strategic play. Servers can aim at specific zones to challenge weaker passers or disrupt the opponent’s formation. For example:
+      </p>
+      <ul className="list-disc text-gray-300 text-sm space-y-2 pl-6 mt-4">
+        <li>Targeting Zone 1 puts pressure on the back-row passer.</li>
+        <li>Serving between Zones 1 and 6 can cause confusion between the back-row players about who should take the ball.</li>
+        <li>Hitting a short serve into Zone 2 can disrupt the front-row players, pulling them out of position for an attack.</li>
+      </ul>
+      <p className="text-sm text-gray-300 leading-relaxed mt-4">
+        Learning to serve accurately into zones improves team strategy and sharpens your serving skills.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
       </div>
     </div>
   );
