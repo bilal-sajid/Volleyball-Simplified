@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import VolleyballCourt from './VolleyballCourt';
 import PlayerMarker from './PlayerMarker';
 
@@ -8,32 +9,67 @@ export default function CourtWithPlayers({
   teamBPositions,
   teamBPlayers,
 }) {
-  // Adjust positions based on serving status
-  const updatedTeamAPositions = teamAServing === 1
-    ? teamAPositions.map((pos, i) => ({
-        ...pos,
-        y: i === 0 ? '2%' : pos.y, // Move server behind the line (Team A)
-      }))
-    : teamAPositions;
+  const [screenSize, setScreenSize] = useState('large');
 
-  const updatedTeamBPositions = teamAServing === 0
-    ? teamBPositions.map((pos, i) => ({
-        ...pos,
-        y: i === 0 ? '92%' : pos.y, // Move server behind the line (Team B)
-      }))
-    : teamBPositions;
+  useEffect(() => {
+    const updateScreenSize = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setScreenSize('small');  // Mobile
+      } else if (width < 1024) {
+        setScreenSize('medium'); // Tablet
+      } else {
+        setScreenSize('large');  // Desktop
+      }
+    };
 
-  // Get the serving player's position
-  const servingPlayerPosition =
-    teamAServing === 1
-      ? updatedTeamAPositions[0] // First player in Team A
-      : updatedTeamBPositions[0]; // First player in Team B
+    // Initial check
+    updateScreenSize();
+
+    // Event listener for resizing window
+    window.addEventListener('resize', updateScreenSize);
+    return () => window.removeEventListener('resize', updateScreenSize);
+  }, []);
+
+  // Responsive Y-positions for Team A
+  const getResponsiveTeamAY = (index) => {
+    if (teamAServing === 1 && index === 0) {
+      switch (screenSize) {
+        case 'small':
+          return '6%';
+        case 'medium':
+          return '3%';
+        default:
+          return '2%'; // Default for large screens
+      }
+    }
+    return teamAPositions[index].y;
+  };
+
+  // Responsive Y-positions for Team B
+  const getResponsiveTeamBY = (index) => {
+    if (teamAServing === 0 && index === 0) {
+      switch (screenSize) {
+        case 'small':
+          return '89%';
+        case 'medium':
+          return '92%';
+        default:
+          return '95%'; // Default for large screens
+      }
+    }
+    return teamBPositions[index].y;
+  };
 
   return (
-    <div className="relative w-full aspect-[18/9] py-10">
+    <div className="relative w-full aspect-[16/10] py-10">
       <VolleyballCourt
         teamAServing={teamAServing}
-        servingPlayerPosition={servingPlayerPosition} // Pass serving player's position
+        servingPlayerPosition={
+          teamAServing === 1
+            ? { x: teamAPositions[0].x, y: getResponsiveTeamAY(0) }
+            : { x: teamBPositions[0].x, y: getResponsiveTeamBY(0) }
+        }
       />
 
       {/* Team A Players - Blue */}
@@ -41,8 +77,8 @@ export default function CourtWithPlayers({
         <PlayerMarker
           key={playerNumber}
           number={playerNumber}
-          x={updatedTeamAPositions[i].x}
-          y={updatedTeamAPositions[i].y}
+          x={teamAPositions[i].x}
+          y={getResponsiveTeamAY(i)}
           teamColor="bg-blue-600"
         />
       ))}
@@ -52,8 +88,8 @@ export default function CourtWithPlayers({
         <PlayerMarker
           key={playerNumber}
           number={playerNumber}
-          x={updatedTeamBPositions[i].x}
-          y={updatedTeamBPositions[i].y}
+          x={teamBPositions[i].x}
+          y={getResponsiveTeamBY(i)}
           teamColor="bg-red-600"
         />
       ))}
