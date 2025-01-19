@@ -55,6 +55,19 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
+            to="/gamesense"
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
+                isActive
+                  ? 'bg-orange-500 text-white'
+                  : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
+              }`
+            }
+          >
+            Building Game Sense
+          </NavLink>
+
+          <NavLink
             to="/glossary"
             className={({ isActive }) =>
               `px-4 py-2 rounded-md font-semibold transition duration-200 ${

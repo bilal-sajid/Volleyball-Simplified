@@ -17,6 +17,7 @@ import RotationsPage from './pages/RotationsPage.jsx';
 import PositionsPage from './pages/PositionsPage.jsx';
 import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
 import GlossaryPage from './pages/GlossaryPage.jsx';
+import BuildingGameSensePage from './pages/GameSensePage.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
   {
     path : '/rotations',
     element : <RotationsPage />,
+    errorElement : <div>404 Not Found</div>
+  },
+  {
+    path : '/gamesense',
+    element : <BuildingGameSensePage />,
     errorElement : <div>404 Not Found</div>
   },
   {
