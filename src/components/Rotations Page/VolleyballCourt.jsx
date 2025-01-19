@@ -22,7 +22,7 @@ const VolleyballCourt = ({ teamAServing, servingPlayerPosition }) => {
                 ? `calc(${Math.max(100 - parseFloat(servingPlayerPosition.y), 8)}% - 30%)`
                 : undefined,
               left: servingPlayerPosition.x,
-              transform: 'translate(-39%, -50%)',
+              transform: 'translate(-39%, -45%)',
             }}
           >
             <span
