@@ -7,12 +7,18 @@ const Navbar = () => {
   return (
     <nav className="bg-black shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo with Image */}
         <NavLink
           to="/"
-          className="text-orange-400 text-2xl font-extrabold tracking-wide hover:text-orange-300 transition duration-200"
+          className="text-orange-400 text-2xl font-extrabold tracking-wide hover:text-orange-300 transition duration-200 flex items-center"
         >
-          Volleyball Simplified
+          V
+          <img 
+            src="/favicon.png" // Make sure the PNG file is in the public folder
+            alt="Volleyball Icon"
+            className="h-4 w-4 relative mt-1"
+          />
+          lleyball Simplified
         </NavLink>
 
         {/* Mobile Menu Button */}
