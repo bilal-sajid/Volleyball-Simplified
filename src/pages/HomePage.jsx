@@ -10,13 +10,7 @@ const HomePage = () => {
     {/* Hero Section */}
     <section className="bg-gradient-to-b from-gray-900 to-black py-16 px-6 text-center shadow-lg">
       <h1 className="text-5xl font-extrabold text-orange-400 flex justify-center items-center">
-        Welcome to V
-        <img 
-          src="/favicon.png" // Ensure the PNG file is in the public folder
-          alt="Volleyball Icon"
-          className="h-7 w-7 relative mt-3"
-        />
-        lleyball Simplified
+        Welcome to Volleyball Simplified
       </h1>
       <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
         Explore the basics of volleyball with our beginner-friendly guide. Whether you're new to the sport or looking to brush up on the fundamentals, our easy-to-follow resources will help you get started with confidence.
