@@ -1,6 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 
+// To Display the Cards
+import InfoSection from '../components/InfoSection';
+
+// Information to Display
+import basicsTermsSection from '../data/keyTermsData';
+
+
 const VolleyballBasicsPage = () => {
   const gameplaySections = [
     {
@@ -45,45 +52,6 @@ For example: If the score is tied at 24-24, play continues until one team achiev
 6. Back-row players cannot attack the ball above the net when in front of the 3-meter line.`
     }
   ];
-
-  const terms = [
-    { 
-      term: 'Serve', 
-      description: 'The action of putting the ball into play by hitting it over the net from behind the baseline.' 
-    },
-    { 
-      term: 'Set', 
-      description: 'A pass used to position the ball for a teammate to attack.' 
-    },
-    { 
-      term: 'Spike', 
-      description: 'A forceful attack made by hitting the ball down into the opponent’s court.' 
-    },
-    { 
-      term: 'Block', 
-      description: 'A defensive play at the net aimed at stopping or deflecting an opponent’s attack.' 
-    },
-    { 
-      term: 'Dig', 
-      description: 'A defensive move to prevent the ball from touching the court after an attack.' 
-    },
-    { 
-      term: 'Rally', 
-      description: 'The sequence of play from the serve until a point is scored.' 
-    },
-    { 
-      term: 'Side-Out', 
-      description: 'When the receiving team wins the rally and gains the right to serve.' 
-    },
-    { 
-      term: 'Ace', 
-      description: 'A serve that lands untouched in the opponent’s court, scoring a point directly.' 
-    },
-    { 
-      term: 'Libero', 
-      description: 'A defensive specialist restricted to the back row, wearing a distinct jersey color.' 
-    },
-  ];
   
 
   return (
@@ -123,25 +91,21 @@ For example: If the score is tied at 24-24, play continues until one team achiev
         </section>
 
         {/* Terms Section */}
-        <section>
-          <h2 className="text-3xl font-bold text-white mb-6 text-center">
-            Key Volleyball Terms
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {terms.map((item) => (
-              <div
-                key={item.term}
-                className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-700 transition-all duration-200"
-              >
-                <h3 className="text-lg font-bold text-orange-400 text-center">{item.term}</h3>
-                <p className="text-sm text-gray-300">{item.description}</p>
-              </div>
-            ))}
-          </div>
+        <section className="mb-16">
+          <InfoSection
+            title={basicsTermsSection.title}
+            terms={basicsTermsSection.terms}
+            gridCols="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          />
+
           <p className="text-center text-orange-400 font-semibold mt-6">
-  Explore more volleyball terminology in our <a href="/glossary" className="underline hover:text-orange-300">Glossary of Terms</a>.
-</p>
+            Explore more volleyball terminology in our{' '}
+            <a href="/glossary" className="underline hover:text-orange-300">
+              Glossary of Terms
+            </a>.
+          </p>
         </section>
+
       </div>
     </div>
   );
