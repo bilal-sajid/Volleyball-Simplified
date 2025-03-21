@@ -16,7 +16,7 @@ const PositionsPage = () => {
     <div className="bg-page-bg min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
-
+        
         {/* Page Header */}
         <header className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-headerSection-title">

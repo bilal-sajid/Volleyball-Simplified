@@ -5,7 +5,7 @@ import React from 'react';
 
 const InfoCard = ({ title, description, showIcon = false }) => {
   return (
-    <div className={`bg-infoCard-bg p-6 rounded-lg shadow-md hover:shadow-lg hover:bg-infoCard-hoverBg transition-all duration-200 border border-gray-700 hover:border-orange-400 flex ${showIcon ? 'items-start' : 'flex-col text-center'}`}>
+    <div className={`bg-infoCard-bg p-6 rounded-lg shadow-md hover:shadow-lg hover:bg-infoCard-hoverBg transition-all duration-200 border border-gray-700 hover:border-infoCard-border flex ${showIcon ? 'items-start' : 'flex-col text-center'}`}>
       {showIcon && (
         <span className="text-xl font-bold mr-4 mt-1">❌</span>
       )}

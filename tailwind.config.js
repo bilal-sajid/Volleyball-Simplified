@@ -31,7 +31,6 @@ export default {
         button: {
           primary: '#4B6A84',   // Slate blue
           hover: '#3A506B',     // Slightly darker hover
-          text: '#FFFFFF',
         },
       }
     }

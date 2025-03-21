@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import SpikingImage from '../assets/Training.png';
+import Image from '../assets/Training.png';
 
 // Info Section Data
 import InfoSection from '../components/InfoSection';
@@ -14,7 +14,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section
         className="relative bg-gradient-to-b from-gray-900 to-black py-24 px-6 text-center shadow-lg bg-cover bg-center"
-        style={{ backgroundImage: `url(${SpikingImage})` }}
+        style={{ backgroundImage: `url(${Image})` }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-hero-bgOverlay opacity-60"></div>
@@ -39,16 +39,16 @@ const HomePage = () => {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="bg-cta-bg py-12 text-center">
-        <h2 className="text-3xl font-bold text-cta-text mb-4">
+      <section className="bg-highlightSection-bg py-12 text-center">
+        <h2 className="text-3xl font-bold text-infoCard-title mb-8">
           Ready to Start?
         </h2>
-        <p className="text-gray-100 text-lg mb-6">
+        <p className=" text-infoCard-text text-lg mb-6">
           Begin your journey into volleyball with our easy-to-follow guides and tips.
         </p>
         <a
           href="/basics"
-          className="bg-cta-buttonBg hover:bg-cta-buttonHover text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
+          className="bg-button-primary hover:bg-button-hover text-button-text font-semibold py-3 px-6 rounded-lg transition-all duration-200"
         >
           Get Started
         </a>

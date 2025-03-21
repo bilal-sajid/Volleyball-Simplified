@@ -70,19 +70,19 @@ For example: If the score is tied at 24-24, play continues until one team achiev
 
         {/* Gameplay Rules Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-6 text-center">
+          <h2 className="text-3xl font-bold text-infoSection-title mb-6 text-center">
             Gameplay Rules and Basics
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {gameplaySections.map((section, index) => (
               <div
                 key={index}
-                className="bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-700 hover:border-orange-400 transition-all duration-200"
+                className="bg-infoCard-bg p-8 rounded-lg shadow-lg border border-gray-700 hover:border-infoCard-border transition-all duration-200"
               >
-                <h3 className="text-xl font-bold text-orange-400 mb-4 text-center border-b border-gray-600 pb-2">
+                <h3 className="text-xl font-bold text-infoCard-title mb-4 text-center border-b border-gray-600 pb-2">
                   {section.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                <p className="text-infoCard-text text-sm leading-relaxed whitespace-pre-line">
                   {section.content}
                 </p>
               </div>
@@ -98,9 +98,9 @@ For example: If the score is tied at 24-24, play continues until one team achiev
             gridCols="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           />
 
-          <p className="text-center text-orange-400 font-semibold mt-6">
+          <p className="text-center text-headerSection-title font-semibold mt-6">
             Explore more volleyball terminology in our{' '}
-            <a href="/glossary" className="underline hover:text-orange-300">
+            <a href="/glossary" className="underline hover:text-highlightSection-border">
               Glossary of Terms
             </a>.
           </p>
