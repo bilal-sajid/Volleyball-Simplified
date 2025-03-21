@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 
+import SpikingImage from '../assets/Training.png';
+
 const HomePage = () => {
   return (
     <div className="bg-black min-h-screen text-white">
@@ -8,13 +10,21 @@ const HomePage = () => {
 
 
     {/* Hero Section */}
-    <section className="bg-gradient-to-b from-gray-900 to-black py-16 px-6 text-center shadow-lg">
-      <h1 className="text-5xl font-extrabold text-orange-400 flex justify-center items-center">
-        Welcome to Volleyball Simplified
-      </h1>
-      <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-        Explore the basics of volleyball with our beginner-friendly guide. Whether you're new to the sport or looking to brush up on the fundamentals, our easy-to-follow resources will help you get started with confidence.
-      </p>
+    <section
+      className="bg-gradient-to-b from-gray-900 to-black py-24 px-6 text-center shadow-lg bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${SpikingImage})` }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+
+      <div className="relative z-10">
+        <h1 className="text-5xl font-extrabold text-orange-400 flex justify-center items-center mb-4">
+          Welcome to Volleyball Simplified
+        </h1>
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          Explore the basics of volleyball with our beginner-friendly guide. Whether you're new to the sport or looking to brush up on the fundamentals, our easy-to-follow resources will help you get started with confidence.
+        </p>
+      </div>
     </section>
 
 
