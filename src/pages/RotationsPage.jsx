@@ -39,15 +39,15 @@ export default function RotationsPage() {
   ];
 
     return (
-      <div className="bg-gray-900 min-h-screen text-white">
+      <div className="bg-page-bg min-h-screen text-white">
         <Navbar />
   
         {/* Header Section */}
         <section className="text-center py-10 px-4">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-orange-400 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-headerSection-title mb-4">
             Rotations & Rally Scoring
           </h1>
-          <p className="text-md sm:text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-headerSection-text max-w-3xl mx-auto">
             Learn how volleyball rotations work and understand rally scoring. Practice tracking the serving team and player rotations as the game progresses.
           </p>
         </section>

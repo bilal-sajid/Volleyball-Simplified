@@ -12,20 +12,17 @@ import zonesSection from '../data/zoneData';
 
 const PositionsPage = () => {
 
-  const handlePositionSelect = (position) => {
-    setSelectedPosition(position);
-  };
-
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-page-bg min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
+
         {/* Page Header */}
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-orange-400">
+          <h1 className="text-4xl font-extrabold text-headerSection-title">
             Volleyball Positions
           </h1>
-          <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+          <p className="text-lg text-headerSection-text mt-4 max-w-2xl mx-auto">
             Discover the key roles and responsibilities of each player on the court. Learn what it takes to play each position effectively.
           </p>
         </header>

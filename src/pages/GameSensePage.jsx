@@ -10,18 +10,19 @@ import { gameSenseSections, commonMistakes } from '../data/gameSenseData';
 
 const BuildingGameSensePage = () => {
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-page-bg min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
-        {/* Page Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-orange-400">
-            Building Game Sense
-          </h1>
-          <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
-            Develop your volleyball instincts and enhance your understanding of the game with these beginner-friendly tips.
-          </p>
-        </header>
+        
+      {/* Page Header */}
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-headerSection-title">
+          Building Game Sense
+        </h1>
+        <p className="text-lg text-headerSection-text mt-4 max-w-2xl mx-auto">
+          Develop your volleyball instincts and enhance your understanding of the game with these beginner-friendly tips.
+        </p>
+      </header>
 
 
         {/* Tips Sections */}

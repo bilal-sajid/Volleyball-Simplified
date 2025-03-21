@@ -7,23 +7,34 @@ export default {
   theme: {
     extend: {
       colors: {
+        page: {
+          bg: '#D8CAB8',
+        },
+        headerSection: {
+          title: '#2F2F2F',
+          text: '#4B5563',
+        },
         infoCard: {
-          bg: '#1F2937',         // Default bg color (gray-800 equivalent)
-          hoverBg: '#374151',    // Hover bg color (gray-700 equivalent)
-          title: '#FB923C',      // Orange title color
-          text: '#D1D5DB',       // Light gray text
+          bg: '#F8F5F0',        // Light cream for cards
+          border: '#D6CFC7',    // Beige border
+          title: '#3F3F3F',     // Slate blue headings
+          text: '#4B5563',      // Dark text
         },
         infoSection: {
-          title: '#FFFFFF',      // Section title color (white or any color you want)
+          title: '#3F3F3F',
         },
         highlightSection: {
-          bg: '#1F2937',          // Same as gray-800
-          border: '#F97316',      // Orange-500 border color
-          text: '#D1D5DB',        // Light gray text
+          bg: '#E4DCCF',      
+          text: '#2F2F2F',
+          border: '#A3987C',
         },
-        
+        button: {
+          primary: '#4B6A84',   // Slate blue
+          hover: '#3A506B',     // Slightly darker hover
+          text: '#FFFFFF',
+        },
       }
-    },
+    }
   },
   plugins: [],
 }

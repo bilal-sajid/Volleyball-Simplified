@@ -9,12 +9,12 @@ import glossarySections from '../data/glossaryData';
 
 const GlossaryPage = () => {
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-page-bg min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-orange-400">Volleyball Glossary</h1>
-          <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-extrabold text-headerSection-title">Volleyball Glossary</h1>
+          <p className="text-lg text-headerSection-text mt-4 max-w-2xl mx-auto">
             A comprehensive glossary of volleyball terms to expand your knowledge and help you communicate effectively on the court.
           </p>
         </header>
