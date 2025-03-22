@@ -1,6 +1,5 @@
-// /data/tipsData.js
 
-// Sections of tips
+// Section for tips
 const gameSenseSections = [
     {
       title: "Tips for Serving",

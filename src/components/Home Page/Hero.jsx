@@ -4,11 +4,13 @@ import Image from '../../assets/Training.png';
 const HeroSection = () => {
     return (
       <section className="relative h-[60vh] flex items-center justify-center text-center">
+
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${Image})` }}
         >
+          
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>

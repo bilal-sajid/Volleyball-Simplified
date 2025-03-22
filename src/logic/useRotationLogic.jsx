@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export default function useRotationLogic() {
+
   // Custom names for players
   const initialTeamAPlayers = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6'];
   const initialTeamBPlayers = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6'];
@@ -44,17 +45,6 @@ export default function useRotationLogic() {
       return arr;
     });
     setTeamBRotations(prev => prev + 1); // increment rotation count
-  }
-
-  // Check if someone reached 25
-  function checkForWinner() {
-    if (teamAScore >= 25) {
-      setMatchOver(true);
-      setWinner('A');
-    } else if (teamBScore >= 25) {
-      setMatchOver(true);
-      setWinner('B');
-    }
   }
 
   function handleTeamAScores() {

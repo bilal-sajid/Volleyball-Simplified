@@ -3,10 +3,11 @@ import React from 'react';
 const VolleyballCourt = ({ teamAServing, servingPlayerPosition }) => {
   return (
     <div className="relative w-full aspect-[2/1.8] bg-gray-800 rounded-lg shadow-lg overflow-visible">
+
       {/* Expanded Court Background */}
       <div className="absolute inset-4 bg-orange-300 border-4 border-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.6),0_-10px_20px_rgba(0,0,0,0.6)]">
         
-        {/* Conditionally Rendered "Server" Highlight Box */}
+        {/* Conditionally Rendering "Server" Box */}
         {servingPlayerPosition && (
           <div
             className={`absolute border-4 ${

@@ -24,7 +24,7 @@ const InfoCard = ({ title, description, showIcon = false, icon = null, link = nu
     </div>
   );
 
-  // If link exists, wrap card in Link
+  // If a link exists, wrap the card with the Link
   return link ? <Link to={link}>{cardContent}</Link> : cardContent;
 };
 

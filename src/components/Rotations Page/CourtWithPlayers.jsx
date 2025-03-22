@@ -26,7 +26,7 @@ export default function CourtWithPlayers({
     // Initial check
     updateScreenSize();
 
-    // Event listener for resizing window
+    // Event listener to resize window
     window.addEventListener('resize', updateScreenSize);
     return () => window.removeEventListener('resize', updateScreenSize);
   }, []);

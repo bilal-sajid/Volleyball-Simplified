@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="bg-navbar-bg shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* Logo with Text Only */}
+        {/* Logo with Text */}
         <NavLink
           to="/"
           className="text-navbar-text text-2xl font-extrabold tracking-wide hover:text-navbar-hover transition duration-200 flex items-center"
@@ -24,7 +24,7 @@ const Navbar = () => {
 
           V
           <img 
-            src="/favicon.png" // Make sure the PNG file is in the public folder
+            src="/favicon.png"
             alt="Volleyball Icon"
             className="h-4 w-4 relative mt-1"
           />
@@ -60,7 +60,7 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Navigation Links for Larger Screens */}
+        {/* Desktop / Larger Screen Menu */}
         <div className="hidden lg:flex space-x-6">
           {navLinks.map((link, index) => (
             <NavLink
