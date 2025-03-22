@@ -35,7 +35,7 @@ const PositionsPage = () => {
 
         {/* Section 2: Court Layout */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-6">
+          <h2 className="text-3xl font-bold text-center text-headerSection-title mb-6">
             Court Layout
           </h2>
           <div className="mx-auto">

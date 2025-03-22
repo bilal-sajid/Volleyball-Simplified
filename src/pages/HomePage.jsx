@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Image from '../assets/Training.png';
+
 
 // Info Section Data
 import InfoSection from '../components/InfoSection';
 import homeData from '../data/homeData';
+import HeroSection from '../components/Home Page/Hero';
 
 const HomePage = () => {
   return (
@@ -12,22 +13,7 @@ const HomePage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section
-        className="relative bg-gradient-to-b from-gray-900 to-black py-24 px-6 text-center shadow-lg bg-cover bg-center"
-        style={{ backgroundImage: `url(${Image})` }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-hero-bgOverlay opacity-60"></div>
-
-        <div className="relative z-10">
-          <h1 className="text-5xl font-extrabold text-hero-title flex justify-center items-center mb-4">
-            Welcome to Volleyball Simplified
-          </h1>
-          <p className="text-lg text-hero-text max-w-3xl mx-auto">
-            Explore the basics of volleyball with our beginner-friendly guide. Whether you're new to the sport or looking to brush up on the fundamentals, our easy-to-follow resources will help you get started with confidence.
-          </p>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
       <section className="py-16 px-6 container mx-auto">

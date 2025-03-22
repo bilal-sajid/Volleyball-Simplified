@@ -47,6 +47,7 @@ const BuildingGameSensePage = () => {
               terms={commonMistakes}
               showIcon={true}
               gridCols="grid-cols-1 md:grid-cols-2"
+              icon="❌"
             />
 
             <p className="text-lg max-w-3xl mx-auto text-center mt-8">

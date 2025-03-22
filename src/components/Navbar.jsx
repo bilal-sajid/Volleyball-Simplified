@@ -4,26 +4,37 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navLinks = [
+    { name: 'Basics', path: '/basics' },
+    { name: 'Positions', path: '/positions' },
+    { name: 'Rotations', path: '/rotations' },
+    { name: 'Game Sense', path: '/gamesense' },
+    { name: 'Glossary', path: '/glossary' },
+  ];
+  
   return (
-    <nav className="bg-black shadow-lg sticky top-0 z-50">
+    <nav className="bg-navbar-bg shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo with Image */}
+
+        {/* Logo with Text Only */}
         <NavLink
           to="/"
-          className="text-orange-400 text-2xl font-extrabold tracking-wide hover:text-orange-300 transition duration-200 flex items-center"
+          className="text-navbar-text text-2xl font-extrabold tracking-wide hover:text-navbar-hover transition duration-200 flex items-center"
         >
+
           V
           <img 
             src="/favicon.png" // Make sure the PNG file is in the public folder
             alt="Volleyball Icon"
             className="h-4 w-4 relative mt-1"
           />
+
           lleyball Simplified
         </NavLink>
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-orange-400 focus:outline-none"
+          className="lg:hidden text-navbar-text focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
@@ -51,101 +62,37 @@ const Navbar = () => {
 
         {/* Navigation Links for Larger Screens */}
         <div className="hidden lg:flex space-x-6">
-          <NavLink
-            to="/basics"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                isActive ? 'bg-orange-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
-              }`
-            }
-          >
-            Basics
-          </NavLink>
-
-          <NavLink
-            to="/positions"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                isActive ? 'bg-orange-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
-              }`
-            }
-          >
-            Positions
-          </NavLink>
-
-          <NavLink
-            to="/rotations"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                isActive ? 'bg-orange-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
-              }`
-            }
-          >
-            Rotations
-          </NavLink>
-
-          <NavLink
-            to="/gamesense"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                isActive ? 'bg-orange-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
-              }`
-            }
-          >
-            Building Game Sense
-          </NavLink>
-
-          <NavLink
-            to="/glossary"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                isActive ? 'bg-orange-500 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-orange-300'
-              }`
-            }
-          >
-            Glossary
-          </NavLink>
+          {navLinks.map((link, index) => (
+            <NavLink
+              key={index}
+              to={link.path}
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md font-semibold transition duration-200 ${
+                  isActive
+                    ? 'bg-navbar-active text-white'
+                    : 'text-navbar-text hover:bg-navbar-hover hover:text-white'
+                }`
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-gray-900 px-6 py-4 space-y-4">
-          <NavLink
-            to="/basics"
-            className="block text-gray-300 hover:text-orange-300 font-semibold text-lg"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Basics
-          </NavLink>
-          <NavLink
-            to="/positions"
-            className="block text-gray-300 hover:text-orange-300 font-semibold text-lg"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Positions
-          </NavLink>
-          <NavLink
-            to="/rotations"
-            className="block text-gray-300 hover:text-orange-300 font-semibold text-lg"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Rotations
-          </NavLink>
-          <NavLink
-            to="/gamesense"
-            className="block text-gray-300 hover:text-orange-300 font-semibold text-lg"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Building Game Sense
-          </NavLink>
-          <NavLink
-            to="/glossary"
-            className="block text-gray-300 hover:text-orange-300 font-semibold text-lg"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Glossary
-          </NavLink>
+        <div className="lg:hidden bg-navbar-bg px-6 py-4 space-y-4">
+          {navLinks.map((link, index) => (
+            <NavLink
+              key={index}
+              to={link.path}
+              className="block text-navbar-text hover:text-navbar-hover font-semibold text-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
       )}
     </nav>
@@ -153,3 +100,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

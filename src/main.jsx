@@ -2,12 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-// import App from './App.jsx';
 
 import React from 'react';
-// import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import { element } from 'prop-types';
 
 
 
@@ -18,40 +15,40 @@ import VolleyballBasicsPage from './pages/VolleyballBasicsPage.jsx';
 import GlossaryPage from './pages/GlossaryPage.jsx';
 import BuildingGameSensePage from './pages/GameSensePage.jsx';
 
+import RootLayout from './RootLayout';
 
 const router = createBrowserRouter([
   {
-  path : '/',
-  element : <HomePage />,
-  errorElement : <div>404 Not Found</div>
+    path: '/',
+    element: <RootLayout />, // Layout wraps all routes
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: 'positions',
+        element: <PositionsPage />,
+      },
+      {
+        path: 'basics',
+        element: <VolleyballBasicsPage />,
+      },
+      {
+        path: 'rotations',
+        element: <RotationsPage />,
+      },
+      {
+        path: 'gamesense',
+        element: <BuildingGameSensePage />,
+      },
+      {
+        path: 'glossary',
+        element: <GlossaryPage />,
+      },
+    ],
+    errorElement: <div>404 Not Found</div>,
   },
-  {
-    path : '/positions',
-    element : <PositionsPage />,
-    errorElement : <div>404 Not Found</div>
-  },
-  {
-    path : '/basics',
-    element : <VolleyballBasicsPage />,
-    errorElement : <div>404 Not Found</div>
-  },
-  {
-    path : '/rotations',
-    element : <RotationsPage />,
-    errorElement : <div>404 Not Found</div>
-  },
-  {
-    path : '/gamesense',
-    element : <BuildingGameSensePage />,
-    errorElement : <div>404 Not Found</div>
-  },
-  {
-    path : '/glossary',
-    element : <GlossaryPage />,
-    errorElement : <div>404 Not Found</div>
-  }
-
-
 ]);
 
 createRoot(document.getElementById('root')).render(
