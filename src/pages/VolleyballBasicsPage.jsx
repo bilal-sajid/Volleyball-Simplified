@@ -59,7 +59,7 @@ For example: If the score is tied at 24-24, play continues until one team achiev
       <Navbar />
       <div className="container mx-auto px-6 py-8">
         {/* Page Header */}
-        <header className="text-center mb-12">
+        <header className="text-center mb-12 mt-16">
           <h1 className="text-4xl font-extrabold text-headerSection-title">
             Volleyball Essentials
           </h1>

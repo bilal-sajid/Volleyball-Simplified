@@ -18,7 +18,7 @@ const PositionsPage = () => {
       <div className="container mx-auto px-6 py-8">
         
         {/* Page Header */}
-        <header className="text-center mb-12">
+        <header className="text-center mb-12 mt-16">
           <h1 className="text-4xl font-extrabold text-headerSection-title">
             Volleyball Positions
           </h1>

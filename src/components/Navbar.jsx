@@ -11,68 +11,44 @@ const Navbar = () => {
     { name: 'Game Sense', path: '/gamesense' },
     { name: 'Glossary', path: '/glossary' },
   ];
-  
+
   return (
-    <nav className="bg-navbar-bg shadow-md sticky top-0 z-50">
+    <nav className="fixed w-full top-0 z-50 bg-navbar-bg shadow-md">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* Logo with Text */}
+        {/* Logo */}
         <NavLink
           to="/"
-          className="text-navbar-text text-2xl font-extrabold tracking-wide hover:text-navbar-hover transition duration-200 flex items-center"
+          className="text-navbar-text text-2xl font-extrabold flex items-center"
         >
-
           V
-          <img 
-            src="/favicon.png"
-            alt="Volleyball Icon"
-            className="h-4 w-4 relative mt-1"
-          />
-
+          <img src="/favicon.png" alt="Volleyball Icon" className="h-4 w-4 relative mt-1 mx-1" />
           lleyball Simplified
         </NavLink>
 
-        {/* Mobile Menu Button */}
+        {/* Menu Icon */}
         <button
           className="lg:hidden text-navbar-text focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           )}
         </button>
 
-        {/* Desktop / Larger Screen Menu */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6">
           {navLinks.map((link, index) => (
             <NavLink
               key={index}
               to={link.path}
-              className={({ isActive }) =>
-                `px-4 py-2 rounded-md font-semibold transition duration-200 ${
-                  isActive
-                    ? 'bg-navbar-active text-white'
-                    : 'text-navbar-text hover:bg-navbar-hover hover:text-white'
-                }`
-              }
+              className="text-navbar-text font-medium hover:text-navbar-hover transition"
             >
               {link.name}
             </NavLink>
@@ -87,7 +63,7 @@ const Navbar = () => {
             <NavLink
               key={index}
               to={link.path}
-              className="block text-navbar-text hover:text-navbar-hover font-semibold text-lg"
+              className="block text-navbar-text font-semibold text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
@@ -100,4 +76,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

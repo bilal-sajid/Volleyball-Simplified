@@ -44,7 +44,7 @@ export default function RotationsPage() {
   
         {/* Header Section */}
         <section className="text-center py-10 px-4">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-headerSection-title mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-headerSection-title mb-4 mt-16">
             Rotations & Rally Scoring
           </h1>
           <p className="text-md sm:text-lg text-headerSection-text max-w-3xl mx-auto">

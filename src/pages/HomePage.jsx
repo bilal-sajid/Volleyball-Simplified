@@ -7,6 +7,8 @@ import InfoSection from '../components/InfoSection';
 import homeData from '../data/homeData';
 import HeroSection from '../components/Home Page/Hero';
 
+import SecondaryButton from '../components/SecondaryButton';
+
 const HomePage = () => {
   return (
     <div className="bg-page-bg min-h-screen text-white">
@@ -32,12 +34,9 @@ const HomePage = () => {
         <p className=" text-infoCard-text text-lg mb-6">
           Begin your journey into volleyball with our easy-to-follow guides and tips.
         </p>
-        <a
-          href="/basics"
-          className="bg-button-primary hover:bg-button-hover text-button-text font-semibold py-3 px-6 rounded-lg transition-all duration-200"
-        >
-          Get Started
-        </a>
+        <SecondaryButton to="/basics" size="sm" extraClasses="">
+          Learn More
+        </SecondaryButton>
       </section>
     </div>
   );

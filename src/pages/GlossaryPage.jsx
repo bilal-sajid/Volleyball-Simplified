@@ -12,7 +12,7 @@ const GlossaryPage = () => {
     <div className="bg-page-bg min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto px-6 py-8">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12 mt-16">
           <h1 className="text-4xl font-extrabold text-headerSection-title">Volleyball Glossary</h1>
           <p className="text-lg text-headerSection-text mt-4 max-w-2xl mx-auto">
             A comprehensive glossary of volleyball terms to expand your knowledge and help you communicate effectively on the court.

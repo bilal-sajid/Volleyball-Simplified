@@ -7,6 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
+
+        primary: {
+          DEFAULT: '#ffffff',
+          text: '#000000',
+          hover: '#d1d5db', 
+        },
+        secondary: {
+          DEFAULT: '#000000',
+          text: '#000000',
+          border: '#000000',
+          hover: '#00000020',
+        },
+
+        navbar: {
+          bg: '#1f2937', 
+          text: '#ffffff', 
+          hover: '#d1d5db', 
+        },
+        
+
+
         page: {
           bg: '#D8CAB8',
         },
