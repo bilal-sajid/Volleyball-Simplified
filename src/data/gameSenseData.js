@@ -1,72 +1,48 @@
 
 // Section for tips
 const gameSenseSections = [
-    {
-      title: "Tips for Serving",
-      terms: [
-        { term: "Types of Serves", description: "Experiment with float serves for unpredictable movement and jump serves for power and speed." },
-        { term: "Targeting", description: "Aim for challenging zones, such as Zone 1 to disrupt the setter or the seam between Zones 5 and 6 to create confusion." },
-        { term: "Consistency", description: "Focus on accuracy over power. A consistent serve keeps the ball in play and pressures the opponent to make a mistake." },
-        { term: "Confidence", description: "Visualize your serve and take a deep breath before hitting to stay calm and focused under pressure." },
-      ],
-    },
-    {
-      title: "Tips for Receiving Serves",
-      terms: [
-        { term: "Positioning", description: "Stay light on your feet with a low, balanced stance to move quickly in any direction." },
-        { term: "Reading the Server", description: "Watch the server’s toss and arm motion. A high toss often signals a jump serve, while a flatter toss indicates a float serve." },
-        { term: "Platform Control", description: "Keep your arms steady and aim to pass the ball high and to the setter’s position for an easy transition to offense." },
-        { term: "Communication", description: "Always call 'Mine!' or 'Yours!' loudly and clearly to avoid confusion with teammates." },
-      ],
-    },
-    {
-      title: "Tips for Receiving Spikes",
-      terms: [
-        { term: "Anticipation", description: "Observe the hitter’s approach and arm swing to predict the trajectory and power of the spike." },
-        { term: "Positioning", description: "Stand behind the blockers, ready to adjust to deflected spikes. Stay low and balanced for quick reactions." },
-        { term: "Soft Hands", description: "Relax your arms to absorb the ball’s impact and direct it upward toward the setter’s position." },
-        { term: "Team Communication", description: "Call out plays like 'Tip!' or 'Roll!' to alert teammates about off-speed shots or unexpected attacks." },
-      ],
-    },
-    {
-      title: "Tips for Defensive Play",
-      terms: [
-        { term: "Reading the Offense", description: "Pay attention to the setter’s hands and the hitter’s approach to predict the type of attack coming." },
-        { term: "Positioning", description: "Defenders should stay low and balanced, ready to move quickly. Spread out to cover gaps in the court." },
-        { term: "Communication", description: "Call out plays like 'Tip!' or 'Cross!' to alert teammates about the type of attack or where to block." },
-        { term: "Reaction and Recovery", description: "Be prepared to chase down balls that deflect off blocks or land unexpectedly. Never give up on a play." },
-      ],
-    },
-    {
-      title: "Tips for Spiking",
-      terms: [
-        { term: "Approach and Jump", description: "Use a three-step or four-step approach to gain momentum and time your jump with the set for maximum reach." },
-        { term: "Arm Swing", description: "Fully extend your hitting arm and snap your wrist on contact to create topspin, making the ball drop quickly." },
-        { term: "Aiming", description: "Look for gaps in the defense, such as tipping over the block or hitting sharp angles into open spaces." },
-        { term: "Adapting to Blocks", description: "Tool the block by aiming for the edges to create deflections, or adjust your shot to avoid the block entirely." },
-      ],
-    },
-    {
-      title: "Tips for Setting",
-      terms: [
-        { term: "Hand Position", description: "Form a triangle shape with your thumbs and index fingers, keeping your hands relaxed and ready to push the ball upward." },
-        { term: "Body Positioning", description: "Position yourself square to your target with your knees bent and your weight slightly forward for balance and control." },
-        { term: "Accuracy", description: "Focus on setting the ball high and to the ideal spot for your hitter, such as near the antennas for outside hitters." },
-        { term: "Soft Touch", description: "Use your fingertips to push the ball rather than your palms, ensuring a clean, controlled contact." },
-        { term: "Communication", description: "Call out plays or signals to coordinate with your hitters, letting them know where the ball will be set." },
-        { term: "Reading the Defense", description: "Watch the blockers and aim to set the ball away from strong defensive positions, creating better opportunities for your hitters." },
-      ],
-    },
-    {
-      title: "Tips for Blocking",
-      terms: [
-        { term: "Positioning", description: "Line up your body with the hitter’s shoulder to cover their angle of attack. Stay close to the net without touching it." },
-        { term: "Timing", description: "Jump as the hitter begins their swing. Avoid jumping too early or late to maximize your reach and effectiveness." },
-        { term: "Hand Placement", description: "Spread your fingers and angle them slightly toward the opponent's court to direct deflections downward." },
-        { term: "Communication", description: "Work with your teammates to decide who will block the line or cross-court shots, ensuring gaps are covered." },
-      ],
-    },
-  ];
+  {
+    title: "Master Your Serve",
+    terms: [
+      { term: "Aim with Purpose", description: "Target zones like Zone 1 or gaps between players to disrupt opponents." },
+      { term: "Prioritize Consistency", description: "Accurate serves are more valuable than powerful ones that go out." },
+      { term: "Stay Calm", description: "Take a deep breath and visualize success before serving." },
+    ],
+  },
+  {
+    title: "Receive Like a Pro",
+    terms: [
+      { term: "Balanced Stance", description: "Stay low and light on your feet to react quickly." },
+      { term: "Control the Pass", description: "Keep arms steady and pass high to the setter's zone." },
+      { term: "Read the Server", description: "Watch toss and arm motion to anticipate float vs jump serves." },
+    ],
+  },
+  {
+    title: "Smart Setting",
+    terms: [
+      { term: "Hands & Body", description: "Form a triangle with your hands and stay square to the target." },
+      { term: "Accuracy Over Flash", description: "Place the set high and controlled for hitters." },
+      { term: "Read the Defense", description: "Set away from strong blockers to give hitters an edge." },
+    ],
+  },
+  {
+    title: "Effective Blocking",
+    terms: [
+      { term: "Position with the Hitter", description: "Align shoulders to block angles effectively." },
+      { term: "Jump Timing", description: "Jump as hitter swings — avoid going too early." },
+      { term: "Communicate with Teammates", description: "Coordinate who blocks line or cross shots." },
+    ],
+  },
+  {
+    title: "Powerful Spiking",
+    terms: [
+      { term: "Controlled Approach", description: "Use a smooth three/four-step approach to time your jump." },
+      { term: "Snap Your Wrist", description: "Topspin helps the ball drop fast." },
+      { term: "Hit Smart", description: "Look for defensive gaps — don’t always go for power." },
+    ],
+  },
+];
+
   
   // Common Mistakes Section
   const commonMistakes = [
@@ -77,6 +53,7 @@ const gameSenseSections = [
     { term: "Not Following Rotations", description: "Failing to rotate correctly disrupts team structure and can result in lost termss. Always be aware of your rotation position and movement." },
     { term: "Weak Passing Form", description: "Passing with bent elbows or improper arm position results in inaccurate passes. Keep a strong, steady platform for effective ball control." },
   ];
+  
   
   // Export both
   export { gameSenseSections, commonMistakes };

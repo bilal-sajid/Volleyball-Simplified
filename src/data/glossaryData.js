@@ -2,56 +2,56 @@
 // This information will be used in the Glossary Page
 
 const glossarySections = [
-    {
-      title: "Serving Terms",
-      terms: [
-        { term: "Float Serve", description: "A serve with no spin, causing unpredictable movement in the air." },
-        { term: "Jump Serve", description: "A powerful serve where the player jumps to hit the ball at its peak." },
-        { term: "Topspin Serve", description: "A serve hit with topspin, causing it to drop quickly into the court." },
-        { term: "Short Serve", description: "A serve aimed just over the net to catch opponents off guard." },
-      ],
-    },
-    {
-      title: "Offensive Terms",
-      terms: [
-        { term: "Tooling the Block", description: "Hitting the ball off the blocker’s hands and out of bounds to score." },
-        { term: "Quick Set", description: "A fast, low set used to surprise defenders." },
-        { term: "Roll Shot", description: "A softer, controlled attack designed to land in open court areas." },
-        { term: "Cross-court Attack", description: "An attack aimed diagonally across the opponent’s court." },
-        { term: "Down-the-line Attack", description: "An attack hit straight down the sideline." },
-      ],
-    },
-    {
-      title: "Defensive Terms",
-      terms: [
-        { term: "Shank", description: "A poorly passed ball that cannot be controlled." },
-        { term: "Stuff Block", description: "A block that deflects the ball straight down into the opponent’s court." },
-        { term: "Cover", description: "Teammates positioned behind the attacker to recover a blocked ball." },
-        { term: "Free Ball", description: "An easy ball sent over the net, allowing the opposing team to set up an attack." },
-        { term: "Peel", description: "A beach volleyball term for retreating from the net to play defense." },
-      ],
-    },
-    {
-      title: "Gameplay and Scoring Terms",
-      terms: [
-        { term: "Side-Out", description: "When the receiving team wins the rally and gains the serve." },
-        { term: "Kill", description: "An attack that directly results in a point." },
-        { term: "Rally Point System", description: "A scoring system where every rally results in a point, regardless of which team served." },
-        { term: "Double Contact", description: "A fault where a player touches the ball twice consecutively." },
-        { term: "Net Violation", description: "A fault where a player touches the net during play." },
-      ],
-    },
-    {
-      title: "General Volleyball Terminology",
-      terms: [
-        { term: "Setter Dump", description: "A deceptive move where the setter pushes the ball over the net instead of setting." },
-        { term: "Rotation", description: "The clockwise movement of players through the six court zones after gaining the serve." },
-        { term: "Libero Replacement", description: "The libero can replace any back-row player without counting as a substitution." },
-        { term: "Overlap", description: "A positional fault where players are out of rotation order during the serve." },
-        { term: "Pin", description: "The outer edges of the net, used for attacking angles." },
-      ],
-    },
+  {
+    title: "Serving Terms",
+    terms: [
+      { term: "Serve", description: "The action that starts each rally by sending the ball over the net." },
+      { term: "Ace", description: "A serve that lands in the opponent’s court untouched, scoring a point." },
+      { term: "Float Serve", description: "A serve with no spin, making it move unpredictably in the air." },
+      { term: "Jump Serve", description: "A serve where the player jumps to hit the ball powerfully." },
+      { term: "Short Serve", description: "A serve aimed just over the net to catch the opponent off guard." },
+    ],
+  },
+  {
+    title: "Offensive Terms",
+    terms: [
+      { term: "Attack", description: "Any action where a player hits the ball over the net to score." },
+      { term: "Spike", description: "A strong, downward hit meant to score or challenge the defense." },
+      { term: "Quick Set", description: "A fast, low set designed to catch the defense off guard." },
+      { term: "Down-the-line Attack", description: "An attack hit straight down the sideline." },
+    ],
+  },
+  {
+    title: "Defensive Terms",
+    terms: [
+      { term: "Block", description: "When front-row players jump to stop or deflect the opponent's attack at the net." },
+      { term: "Dig", description: "A defensive move where a player prevents the ball from touching the court after an attack." },
+      { term: "Shank", description: "A poorly passed ball that cannot be controlled." },
+      { term: "Cover", description: "Teammates positioned behind an attacker to recover a blocked ball." },
+      { term: "Free Ball", description: "An easy ball sent over the net, giving the receiving team time to set up." },
+    ],
+  },
+  {
+    title: "Gameplay and Scoring Terms",
+    terms: [
+      { term: "Rally", description: "The continuous play from serve until the ball hits the ground or a fault occurs." },
+      { term: "Side-Out", description: "When the receiving team wins the rally and earns the right to serve." },
+      { term: "Kill", description: "An attack that results directly in a point." },
+      { term: "Double Contact", description: "A fault where a player touches the ball twice in a row." },
+      { term: "Net Violation", description: "A fault where a player touches the net during play." },
+    ],
+  },
+  {
+    title: "General Volleyball Terms",
+    terms: [
+      { term: "Rotation", description: "The clockwise movement of players through court positions after winning the serve." },
+      { term: "Overlap", description: "A positional fault where players are out of their rotation order during the serve." },
+      { term: "Setter", description: "The player who sets up the ball for attackers, like a team playmaker." },
+      { term: "Pin", description: "The outer edges of the net, used as reference points for attacking angles." },
+    ],
+  },
 ];
+
 
 
 

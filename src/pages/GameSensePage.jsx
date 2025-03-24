@@ -7,6 +7,7 @@ import InfoSection from '../components/InfoSection';
 
 // Information to Display
 import { gameSenseSections, commonMistakes } from '../data/gameSenseData';
+import Callout from '../components/Callout';
 
 const BuildingGameSensePage = () => {
   return (
@@ -27,15 +28,52 @@ const BuildingGameSensePage = () => {
 
         {/* Tips Sections */}
         <section>
-          <div className="space-y-12">
-            {gameSenseSections.map((section, index) => (
+          <div className="space-y-16">
+          {gameSenseSections.map((section, index) => (
+            <div key={index} className="space-y-6 mb-8">
+
               <InfoSection
-                key={index}
                 title={section.title}
                 terms={section.terms}
               />
-            ))}
+
+              {/* Conditionally render the Callouts */}
+
+              {index === 0 && (
+                <Callout variant="info" title="Your Serve, Your Advantage">
+                  Serving isn’t just starting the rally — it’s the only skill you control without interference. Use it to gain momentum and put pressure on the opponent.
+                </Callout>
+              )}
+
+              {index === 1 && (
+                <Callout variant="warning" title="Watch Out!">
+                  Staying flat-footed or tense during serve receive limits your ability to react quickly. Always stay loose and light!
+                </Callout>
+              )}
+
+              
+              {index === 2 && (
+                <Callout variant="tip" title="Be Unpredicatable!">
+                  A good setter doesn’t just deliver clean sets — they keep the blockers guessing by mixing up plays and setting to different hitters
+                </Callout>
+              )}
+
+              {index === 3 && (
+                <Callout variant="info" title="Focus on Timing!">
+                  Good blockers don't always jump highest — they jump at the right time and coordinate with their teammates.
+                </Callout>
+              )}
+
+              {index === 4 && (
+                <Callout variant="warning" title="Avoid the Net!">
+                  Reaching too far or mistiming your jump can cause net violations. Keep your approach clean and controlled to avoid giving free points.                
+                </Callout>
+              )}
+
+            </div>
+          ))}
           </div>
+
         </section>
 
 
