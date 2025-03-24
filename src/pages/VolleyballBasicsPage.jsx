@@ -6,6 +6,7 @@ import InfoSection from '../components/InfoSection';
 
 // Information to Display
 import basicsTermsSection from '../data/keyTermsData';
+import Callout from '../components/Callout';
 
 
 const VolleyballBasicsPage = () => {
@@ -88,6 +89,11 @@ For example: If the score is tied at 24-24, play continues until one team achiev
               </div>
             ))}
           </div>
+
+          <Callout variant="tip" title="Pro Tip">
+            Always call ‘Mine!’ before going for the ball — communication is key!
+          </Callout>
+          
         </section>
 
         {/* Terms Section */}

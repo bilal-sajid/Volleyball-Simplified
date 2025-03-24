@@ -3,6 +3,8 @@ import useRotationLogic from '../logic/useRotationLogic';
 import CourtWithPlayers from '../components/Rotations Page/CourtWithPlayers';
 import Navbar from '../components/Navbar';
 
+import Callout from '../components/Callout';
+
 export default function RotationsPage() {
   const {
     teamAServing,
@@ -50,6 +52,7 @@ export default function RotationsPage() {
           <p className="text-md sm:text-lg text-headerSection-text max-w-3xl mx-auto">
             Learn how volleyball rotations work and understand rally scoring. Practice tracking the serving team and player rotations as the game progresses.
           </p>
+
         </section>
   
         {/* Main Content */}
@@ -148,6 +151,13 @@ export default function RotationsPage() {
             </button>
           </div>
         </div>
+
+        <section className="px-24 mx-auto py-16">
+          <Callout variant="warning" title="Be careful!">
+            Overlapping with a teammate before the serve results in a rotation fault.
+          </Callout>
+        </section>
+
       </div>
     );
   }

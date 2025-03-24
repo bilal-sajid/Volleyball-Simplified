@@ -9,6 +9,7 @@ import InfoSection from '../components/InfoSection';
 // Information to Display
 import positionsSection from '../data/positionsData';
 import zonesSection from '../data/zoneData';
+import Callout from '../components/Callout';
 
 const PositionsPage = () => {
 
@@ -28,10 +29,22 @@ const PositionsPage = () => {
         </header>
 
         {/* Section 1: Player Positions */}
-        <InfoSection
-          title={positionsSection.title}
-          terms={positionsSection.terms}
-        />
+        <section className='mb-12 mt-16'>
+          <InfoSection
+            title={positionsSection.title}
+            terms={positionsSection.terms}
+          />
+        </section>
+
+        <section className='mx-auto my-8 mb-10 px-16'>
+          <Callout variant="info" title="Did You Know?">
+            Liberos cannot serve or attack above net height in most rule sets.
+          </Callout>
+
+          <Callout variant="tip" title="Tip">
+            Practice playing multiple positions to become a versatile player.
+          </Callout>
+        </section>
 
         {/* Section 2: Court Layout */}
         <section className="mb-16">
@@ -41,6 +54,12 @@ const PositionsPage = () => {
           <div className="mx-auto">
             <VolleyballCourt />
           </div>
+        </section>
+
+        <section className="mx-auto my-8 mb-10 px-16">
+          <Callout variant="success" title="Great Job!">
+            You’ve now mastered the key player positions. Ready to dive into something more advanced? Let’s talk about Zones!
+          </Callout>
         </section>
 
         {/* Section 3: Zones Overview */}

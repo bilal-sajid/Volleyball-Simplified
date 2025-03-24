@@ -8,6 +8,7 @@ import homeData from '../data/homeData';
 import HeroSection from '../components/Home Page/Hero';
 
 import SecondaryButton from '../components/SecondaryButton';
+import Callout from '../components/Callout';
 
 const HomePage = () => {
   return (
@@ -24,7 +25,25 @@ const HomePage = () => {
           terms={homeData.terms}
           gridCols="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         />
+
+{/* <Callout variant="tip" title="Pro Tip">
+  Communicate loudly and clearly to avoid overlaps!
+</Callout>
+
+<Callout variant="info" title="Did You Know?">
+  Volleyball rotations can feel tricky at first, but once you understand them, they unlock strategic possibilities!
+</Callout>
+
+<Callout variant="success" title="Nice Work!">
+  You've successfully completed the positions guide.
+</Callout>
+
+<Callout variant="warning" title="Caution!">
+  Always double-check player rotations before serving.
+</Callout> */}
       </section>
+      
+
 
       {/* Call-to-Action Section */}
       <section className="bg-highlightSection-bg py-12 text-center">

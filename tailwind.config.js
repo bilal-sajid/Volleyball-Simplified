@@ -21,22 +21,42 @@ export default {
         },
 
         navbar: {
-          bg: '#1f2937', 
-          text: '#ffffff', 
-          hover: '#d1d5db', 
+          bg: '#3F3F3F',      
+          text: '#F8F5F0',    
+          hover: '#D6CFC7',   
         },
-        
-
 
         page: {
           bg: '#D8CAB8',
         },
-        navbar: {
-          bg: '#3F3F3F',      
-          text: '#F8F5F0',    
-          hover: '#D6CFC7',   
-          active: '#4B6A84',  
+
+        callout: {
+          info: {
+            bg: '#f9f7f4',
+            border: '#c8b6a6',
+            text: '#3b3b3b',
+            icon: '#a08b6e',
+          },
+          success: {
+            bg: '#f4f9f7',
+            border: '#a8c6b6',
+            text: '#2f4f4f',
+            icon: '#4caf50',
+          },
+          warning: {
+            bg: '#fdf7f3',
+            border: '#e0b980',
+            text: '#5b3e1d',
+            icon: '#f4a261',
+          },
+          tip: {
+            bg: '#f8f8f3',
+            border: '#c4c99c',
+            text: '#3b3b3b',
+            icon: '#9ca86e',
+          },
         },
+
         headerSection: {
           title: '#2F2F2F',
           text: '#4B5563',
