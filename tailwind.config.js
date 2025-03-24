@@ -61,6 +61,7 @@ export default {
           title: '#2F2F2F',
           text: '#4B5563',
         },
+
         infoCard: {
           bg: '#F8F5F0',        
           border: '#D6CFC7',    
@@ -70,6 +71,7 @@ export default {
         infoSection: {
           title: '#3F3F3F',
         },
+        
         highlightSection: {
           bg: '#E4DCCF',      
           text: '#2F2F2F',
